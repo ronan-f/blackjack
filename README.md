@@ -1,0 +1,3 @@
+## Blackjack game to practice TDD
+
+### Work in progress...
