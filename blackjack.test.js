@@ -21,10 +21,12 @@ test("Deal function should return 2 random cards", () => {
 
 test("Function should calculate hands according to blackjack rules", () => {
   const hand1 = [{hearts: "Queen"}, {spades: 5}];
-  // const hand2 = [{hearts: "Ace"}, {clubs: 2}];
-  const hand3 = [{diamonds: "Ace", diamonds: "King"}]
+  const hand2 = [{hearts: "Ace"}, {clubs: 2}];
+  const hand3 = [{diamonds: "Ace"}, {diamonds: "King"}];
+  const hand4 = [{diamonds: "Ace"}, {spades: 3}, {hearts: "queen"}];
 
   expect(calculateHand(hand1)).toBe(15);
-  // expect(calculateHand(hand2)).toBe(13);
+  expect(calculateHand(hand2)).toBe(13);
   expect(calculateHand(hand3)).toBe(21);
+  expect(calculateHand(hand4)).toBe(14);
 })

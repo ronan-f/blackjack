@@ -34,8 +34,7 @@ const calculateHand = (cards) => {
   cards.forEach((card) => {
     const key = Object.keys(card);
     if(card[key] === "Ace"){
-      console.log(card[key]);
-      total + 11 > 21 ? total + 1 : total + 11
+      total + 11 > 21 ? total += 1 : total += 11
     }else if(typeof card[key] === "string") {
       total += 10;
     } else {
